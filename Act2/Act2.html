@@ -8,8 +8,11 @@
   </head>
   <body>
     <script>
-      var nombre = prompt("Introudce tu nombre y apellidos", "");
-      document.write(nombre.toLowerCase());
+      const nombre = prompt("Introudce tu nombre y apellidos", "");
+
+      document.write(nombre.replace(/ /g, ""));
+      document.write(`<br>`);
+      document.write(`${nombre.toLowerCase()}<br>`);
       document.write(nombre.toUpperCase());
     </script>
   </body>
