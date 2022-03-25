@@ -10,10 +10,12 @@
     <script>
       const nombre = prompt("Introudce tu nombre y apellidos", "");
 
-      document.write(nombre.replace(/ /g, ""));
-      document.write(`<br>`);
-      document.write(`${nombre.toLowerCase()}<br>`);
-      document.write(nombre.toUpperCase());
+      document.write(`${nombre.replace(/ /g, "")}<br>`);
+      //Nombre en minuscula
+      document.write(`Nombre en minuscula: ${nombre.toLowerCase()}<br>`);
+      //Nombre en mayuscula
+      document.write(`Nombre en mayuscula: ${nombre.toUpperCase()}`);
+      document.write($);
     </script>
   </body>
 </html>
