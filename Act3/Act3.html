@@ -8,9 +8,10 @@
   </head>
   <body>
     <script>
-      prompt("Ingrese una fecha", "");
-      let fecha = document.write("La fecha dada");
-      let cadena = new Date(fecha);
+      fecha = prompt("Ingrese una fecha:", "");
+      document.write(`La fecha es: ${fecha}<br>`);
+      const date = fecha.weekNumber;
+      document.write(`Semana ${date}`);
     </script>
   </body>
 </html>
