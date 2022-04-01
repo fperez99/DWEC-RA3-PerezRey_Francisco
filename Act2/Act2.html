@@ -9,8 +9,10 @@
   <body>
     <script>
       const nombre = prompt("Introudce tu nombre y apellidos", "");
-
-      document.write(`${nombre.replace(/ /g, "")}<br>`);
+      //Creamos una cadena sin espacios
+      sinespacio = nombre.replace(/ /g, "");
+      //Ahora contamos los caracteres de esa cadena
+      document.write(` Contiene ${sinespacio.length} caracteres<br>`);
       //Nombre en minuscula
       document.write(`Nombre en minuscula: ${nombre.toLowerCase()}<br>`);
       //Nombre en mayuscula
