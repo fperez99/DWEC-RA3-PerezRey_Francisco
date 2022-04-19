@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      /*Pedimos la fecha por teclado al usuario*/
       let fecha = prompt("Ingrese una fecha(YYYY-MM-DD):", "");
       let fechaseparada = fecha.split("-");
       let ano = fechaseparada[0];
@@ -15,6 +16,15 @@
       let dia = fechaseparada[2];
       let averiguar = new Date(ano, mes, dia);
       let ordenada = ano + "-" + mes + "-" + dia;
+      /*almacenamos el primer dia del año*/
+      var unoDeEnero = new Date(averiguar.getFullYear(), 0, 1);
+      /*calculamos el numero del dia en el año*/
+      var numeroDias = Math.floor(
+        (averiguar - unoDeEnero) / (24 * 60 * 60 * 1000)
+      );
+      /*por ultimo calculamos a que semana corresponde ese dia en el año*/
+      var numSemana = Math.ceil((averiguar.getDay() + 1 + numeroDias) / 7);
+      document.write("El numero de la semana de es: " + numSemana);
     </script>
   </body>
 </html>
