@@ -27,6 +27,24 @@
             height +
             "p"
         );
+
+        intervalor = setInterval(function () {
+          anchuraVentana = miVentana.outerWidth;
+
+          if (anchuraVentana == 400) {
+            minimizar = true;
+          }
+          if (
+            anchuraVentana <= 400 &&
+            anchuraVentana > 200 &&
+            minimizar == true
+          ) {
+            miVentana.resizeTo(anchuraVentana - 40, anchuraVentana - 40);
+          } else {
+            miVentana.resizeTo(anchuraVentana + 40, anchuraVentana + 40);
+            minimizar = false;
+          }
+        }, 1000);
       }
       function temporizador() {}
     </script>
