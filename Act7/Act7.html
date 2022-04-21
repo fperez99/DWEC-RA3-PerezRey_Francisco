@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 7</title>
+    <script></script>
+  </head>
+  <body onload="mostrarTabla(equiposLista,puntosLista)">
+    <section>
+      <article>
+        <table id="liga">
+          <thead>
+            <tr>
+              <th>Posicion</th>
+              <th>Equipo</th>
+              <th>Puntos</th>
+            </tr>
+          </thead>
+        </table>
+        <from>
+          <fieldset>
+            <label>Posicion</label>
+            <input type="text" id="Posicion" />
+            <label>Equipo</label>
+            <input type="text" id="Equipo" />
+            <label>Puntos</label>
+            <input type="text" id="Puntos" />
+            <input
+              type="button"
+              value="Aplicar"
+              onclick="addElements(equiposLista,puntosLista)"
+            />
+          </fieldset>
+        </from>
+      </article>
+    </section>
+  </body>
+</html>
