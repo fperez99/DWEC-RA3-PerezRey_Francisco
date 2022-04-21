@@ -6,18 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Actividad 4</title>
     <script>
-      var ventana;
+      var intervalor;
+      var miVentana;
+      let randomX = Math.random() * 1024;
+      let randomY = Math.random() * 768;
+      let height = 400;
+      let width = 400;
       function abrirventana() {
-        ventana = window.open(
+        document.getElementById("abrir");
+        miVentana = window.open(
           "",
           "",
-          "menubar=no, scrollbars=no, width=400, height=400"
+          "left=" +
+            randomX +
+            ",top=" +
+            randomY +
+            ",resizable=yes, width=" +
+            width +
+            "px, height=" +
+            height +
+            "p"
         );
       }
       function temporizador() {}
     </script>
   </head>
   <body>
-    <button onclick="abrirventana()">Abrir ventana</button>
+    <button id="abrir" onclick="abrirventana()">Abrir ventana</button>
   </body>
 </html>
