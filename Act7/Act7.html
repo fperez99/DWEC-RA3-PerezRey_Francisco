@@ -81,6 +81,38 @@
         );
       }
     }
+
+    function mostrarTabla(equiposLista, puntosLista) {
+      let tabla = document.getElementById("liga");
+      let tblBody = document.createElement("tbody");
+      tblBody.setAttribute("id", "clasificacion");
+
+      for (let i = 0; i < equiposLista.length; i++) {
+        let fila = document.createElement("tr");
+        for (let j = 0; j < 3; j++) {
+          let celda = document.createElement("td");
+          let textoCelda;
+
+          switch (j) {
+            case 0:
+              textoCelda = document.createTextNode(i + 1);
+              break;
+            case 1:
+              textoCelda = document.createTextNode(equiposLista[i]);
+              break;
+            case 2:
+              textoCelda = document.createTextNode(puntosLista[i]);
+              break;
+          }
+
+          celda.appendChild(textoCelda);
+          fila.appendChild(celda);
+        }
+
+        tblBody.appendChild(fila);
+        tabla.appendChild(tblBody);
+      }
+    }
   </script>
   <body onload="mostrarTabla(equiposLista,puntosLista)">
     <section>
