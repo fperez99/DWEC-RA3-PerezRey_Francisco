@@ -7,7 +7,35 @@
     <title>Actividad 7</title>
     <script></script>
   </head>
-  <script></script>
+  <script>
+    let equiposLista = [
+      "FC Barcelona",
+      "Real Madrid",
+      "Atletico de Madrid",
+      "Sevilla FC",
+    ];
+    let puntosLista = ["20", "17", "12", "9"];
+
+    function ValidarPosicion(posicion) {
+      if (isNaN(posicion) || posicion > equiposLista.length + 1) {
+        return false;
+      }
+      return true;
+    }
+
+    function Validarpuntos(puntos) {
+      if (isNaN(puntos)) {
+        return false;
+      }
+      return true;
+    }
+
+    function borrarCampos() {
+      document.getElementById("Posicion").value = "";
+      document.getElementById("Equipo").value = "";
+      document.getElementById("Puntos").value = "";
+    }
+  </script>
   <body onload="mostrarTabla(equiposLista,puntosLista)">
     <section>
       <article>
