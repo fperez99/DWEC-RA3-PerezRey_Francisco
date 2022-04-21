@@ -46,6 +46,41 @@
       }
       return true;
     }
+
+    function borrarTabla() {
+      document
+        .getElementById("liga")
+        .removeChild(document.getElementById("clasificacion"));
+    }
+
+    function addElements(equiposLista, puntosLista) {
+      let posicion = document.getElementById("Posicion").value;
+      let equipo = document.getElementById("Equipo").value;
+      let puntos = document.getElementById("Puntos").value;
+      posicion--;
+
+      if (
+        ValidarPosicion(posicion) &&
+        ValidarEquipo(equipo) &&
+        Validarpuntos(puntos)
+      ) {
+        if (posicion == equiposLista.length) {
+          equiposLista.push(equipo);
+          puntosLista.push(puntos);
+        } else {
+          equiposLista.splice(posicion, 1, equipo);
+          puntosLista.splice(posicion, 1, puntos);
+        }
+        borrarCampos();
+        borrarTabla();
+        mostrarTabla(equiposLista, puntosLista);
+      } else {
+        borrarCampos();
+        return alert(
+          "Algunos de los datos introducidos en un campo son incorrectos"
+        );
+      }
+    }
   </script>
   <body onload="mostrarTabla(equiposLista,puntosLista)">
     <section>
