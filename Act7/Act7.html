@@ -35,6 +35,17 @@
       document.getElementById("Equipo").value = "";
       document.getElementById("Puntos").value = "";
     }
+
+    function ValidarEquipo(Equipo) {
+      let letras = "abcdefghijklmnñopqrstuvwxyz ";
+      Equipo = Equipo.toLowerCase();
+      for (let i = 0; i < Equipo.length; i++) {
+        if (letras.indexOf(Equipo.charAt(i)) == -1) {
+          return false;
+        }
+      }
+      return true;
+    }
   </script>
   <body onload="mostrarTabla(equiposLista,puntosLista)">
     <section>
