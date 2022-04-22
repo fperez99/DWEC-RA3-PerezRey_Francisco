@@ -8,10 +8,13 @@
   </head>
   <body>
     <script>
+      //Utilizamos el metodo Math.pow para las potencias
       const pi = Math.PI;
+      //Usuario pedimos un valor por teclado
       let radio = prompt("Dame el valor del radio de la circunferencia", 0);
       let diametro = radio * 2;
       var perimetro = pi * diametro;
+      //Utilizamos el metodo .toFixed() para redondear a 2 decimales
       var perimetro = perimetro.toFixed(2);
       var area = pi * Math.pow(radio, 2);
       var area = area.toFixed(2);
@@ -19,12 +22,13 @@
       var areacirculo = areacirculo.toFixed(2);
       var volumen = (4 / 3) * pi * Math.pow(radio, 3);
       var volumen = volumen.toFixed(2);
-      document.write(`El radio es: ${radio}<br>`);
-      document.write(`El diametro es: ${diametro}<br>`);
-      document.write(`El perimetro es: ${perimetro}<br>`);
-      document.write(`El area del circulo es: ${area}<br>`);
-      document.write(`El area de la esfera es: ${areacirculo}<br>`);
-      document.write(`El valor del volumen de la esfera es: ${volumen}`);
+      // Imprimimos todo por pantalla
+      document.write(`El radio es: ${radio} cm <br>`);
+      document.write(`El diametro es: ${diametro} cm<br>`);
+      document.write(`El perimetro es: ${perimetro} cm<br>`);
+      document.write(`El area del circulo es: ${area} cm2<br>`);
+      document.write(`El area de la esfera es: ${areacirculo} cm2<br>`);
+      document.write(`El valor del volumen de la esfera es: ${volumen} cm3`);
     </script>
   </body>
 </html>
