@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 8</title>
+  </head>
+  <body>
+    <script>
+      let nombre;
+      let direccion;
+      let edad;
+      let profesion;
+
+      function verCookies() {
+        if (document.cookie == "") {
+          alert("No existen cookies");
+          nombre = prompt("Introduce tu nombre: ");
+          direccion = prompt("Introduce tu direccion: ");
+          edad = prompt("Introduce tu edad: ");
+          profesion = prompt("Introduce tu profesion: ");
+
+          document.cookie = "nombre = " + encodeURIComponent(nombre);
+          document.cookie = "direccion = " + encodeURIComponent(direccion);
+          document.cookie = "edad = " + encodeURIComponent(edad);
+          document.cookie = "profesion= " + encodeURIComponent(profesion);
+        } else {
+          alert(document.cookie);
+          borrarCookies();
+        }
+      }
+    </script>
+    <button type="button" onclick="verCookies()" id="verCookies">
+      Cookies
+    </button>
+  </body>
+</html>
