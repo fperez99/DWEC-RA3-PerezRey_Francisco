@@ -13,6 +13,7 @@
       let edad;
       let profesion;
 
+      /* Con esta funcion comprobamos si existen cookies y sino las pediremos por teclado */
       function verCookies() {
         if (document.cookie == "") {
           alert("No existen cookies");
@@ -29,6 +30,14 @@
           alert(document.cookie);
           borrarCookies();
         }
+      }
+
+      /* Con esta funcion borramos las cookies que ya existen */
+      function borrarCookies() {
+        document.cookie = "nombre =;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        document.cookie = "direccion =;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        document.cookie = "edad =;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        document.cookie = "profesion =;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
       }
     </script>
     <button type="button" onclick="verCookies()" id="verCookies">
